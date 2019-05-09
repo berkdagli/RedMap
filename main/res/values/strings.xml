@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RedMap</string>
+    <string name="cam_ambalaj_button">CAM AMBALAJ&#10;ATIKLARI</string>
+    <string name="ilac_button">ATIK İLAÇ</string>
+    <string name="pil_button">ATIK PİL</string>
 </resources>
