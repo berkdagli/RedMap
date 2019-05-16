@@ -5,7 +5,68 @@
     android:id="@+id/constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/diger_ambalaj_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/diger_ambalaj_button"
+        app:layout_constraintStart_toEndOf="@+id/diger_ambalaj_button"
+        app:layout_constraintTop_toTopOf="@+id/diger_ambalaj_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageButton
+        android:id="@+id/pil_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/pil_button"
+        app:layout_constraintStart_toEndOf="@+id/pil_button"
+        app:layout_constraintTop_toTopOf="@+id/pil_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageButton
+        android:id="@+id/elektronik_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/elektronik_button"
+        app:layout_constraintStart_toEndOf="@+id/elektronik_button"
+        app:layout_constraintTop_toTopOf="@+id/elektronik_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageButton
+        android:id="@+id/cam_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/cam_ambalaj_button"
+        app:layout_constraintStart_toEndOf="@+id/cam_ambalaj_button"
+        app:layout_constraintTop_toTopOf="@+id/cam_ambalaj_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageButton
+        android:id="@+id/bitkisel_yag_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/bitkisel_yag_button"
+        app:layout_constraintStart_toEndOf="@+id/bitkisel_yag_button"
+        app:layout_constraintTop_toTopOf="@+id/bitkisel_yag_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
 
     <Button
         android:id="@+id/cam_ambalaj_button"
@@ -13,8 +74,11 @@
         android:layout_height="70dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/cam_button_color"
+        android:onClick="showMap"
         android:text="@string/cam_ambalaj_button"
+        android:textColor="@color/text_color"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,10 +87,13 @@
         android:id="@+id/ilac_button"
         android:layout_width="110dp"
         android:layout_height="70dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
+        android:background="@color/ilac_button_color"
+        android:onClick="showMap"
         android:text="@string/ilac_button"
+        android:textColor="@color/text_color"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,9 +104,92 @@
         android:layout_height="70dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="53dp"
+        android:background="@color/pil_button_color"
+        android:onClick="showMap"
         android:text="@string/pil_button"
+        android:textColor="@color/text_color"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cam_ambalaj_button" />
+
+    <Button
+        android:id="@+id/bitkisel_yag_button"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="@color/bitkisel_yag_button_color"
+        android:onClick="showMap"
+        android:text="@string/bitkisel_yag_button"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ilac_button" />
+
+    <Button
+        android:id="@+id/elektronik_button"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="53dp"
+        android:background="@color/elektronik_button_color"
+        android:onClick="showMap"
+        android:text="@string/elektronik_button"
+        android:textColor="@color/text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pil_button" />
+
+    <Button
+        android:id="@+id/tekstil_button"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="@color/tekstil_button_color"
+        android:onClick="showMap"
+        android:text="@string/tekstil_button"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bitkisel_yag_button" />
+
+    <Button
+        android:id="@+id/diger_ambalaj_button"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="53dp"
+        android:background="@color/diger_ambalaj_button_color"
+        android:onClick="showMap"
+        android:text="@string/diger_ambalaj_button"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elektronik_button" />
+
+    <ImageButton
+        android:id="@+id/ilac_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/ilac_button"
+        app:layout_constraintStart_toEndOf="@+id/ilac_button"
+        app:layout_constraintTop_toTopOf="@+id/ilac_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageButton
+        android:id="@+id/tekstil_info"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="showInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/tekstil_button"
+        app:layout_constraintStart_toEndOf="@+id/tekstil_button"
+        app:layout_constraintTop_toTopOf="@+id/tekstil_button"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
 
 </android.support.constraint.ConstraintLayout>

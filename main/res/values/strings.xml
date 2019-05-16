@@ -3,4 +3,24 @@
     <string name="cam_ambalaj_button">CAM AMBALAJ&#10;ATIKLARI</string>
     <string name="ilac_button">ATIK İLAÇ</string>
     <string name="pil_button">ATIK PİL</string>
+    <string name="bitkisel_yag_button">BİTKİSEL&#10;ATIK YAĞLAR</string>
+    <string name="elektronik_button">ELEKTRONİK ATIK</string>
+    <string name="tekstil_button">TEKSTİL ATIKLARI</string>
+    <string name="diger_ambalaj_button">DİĞER AMBALAJ ATIKLARI</string>
+    <string name="ilac_info">Son kullanma tarihi geçmiş ya da kullanmadığınız ilaçlar içindir. Tıbbi
+        atıklarınızı atmayınız.</string>
+    <string name="bitkisel_yag_info">Kullanılmış kızartma yağlarınızı cam veya plastik şişelerde
+        biriktirip şişesiyle birlikte bitkisel atık yağ toplama bidonlarına atabilirsiniz.</string>
+    <string name="pil_info">Kullanım ömrünü tamamlamış pillerinizi sadece atık pil toplama
+        kutularına atınız.</string>
+    <string name="cam_info">Renksiz cam şişe ve kavanozlarınızı kumbaranın beyaz kısmına,
+        renkli cam şişe ve kavanozlarınızı kumbaranın yeşil kısmına atınız.</string>
+    <string name="elektronik_info">Kullanım ömrünü tamamlamış tüm elektrikli ve elektronik
+        eşyalarınızı (telefon, bilgisayar ekipmanları, elektrikli aletler, floresan
+        lambalar, beyaz eşyalar vs.) elektronik atık kumbarasına atabilirsiniz.</string>
+    <string name="tekstil_info">Kumbaralara kullanılmış tüm giysileri (şapka, kazak, t-shirt,
+        çorap, elbise, ayakkabı, bot vb.) ve diğer tekstil ürünlerinizi (battaniye, örtü,
+        eşarp, perde, çanta, havlu vb.) atabilirsiniz.</string>
+    <string name="diger_ambalaj_info">Plastik, metal, kağıt-karton ve kompozit ambalaj
+        atıklarınızı atabilirsiniz.</string>
 </resources>

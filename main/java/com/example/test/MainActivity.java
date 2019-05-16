@@ -1,7 +1,10 @@
 package com.example.test;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +12,45 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void showInfo(View v) {
+        int str;
+        switch(v.getId()) {
+            case R.id.ilac_info:
+                str = R.string.ilac_info;
+            break;
+            case R.id.bitkisel_yag_info:
+                str = R.string.bitkisel_yag_info;
+            break;
+            case R.id.pil_info:
+                str = R.string.pil_info;
+            break;
+            case R.id.cam_info:
+                str = R.string.cam_info;
+            break;
+            case R.id.diger_ambalaj_info:
+                str = R.string.diger_ambalaj_info;
+            break;
+            case R.id.elektronik_info:
+                str = R.string.elektronik_info;
+            break;
+            case R.id.tekstil_info:
+                str = R.string.tekstil_info;
+            break;
+            default:
+                str = R.string.tekstil_info;
+            break;
+        }
+        Bundle args = new Bundle();
+        args.putInt("str",str);
+        InfoDialog info = new InfoDialog();
+        info.setArguments(args);
+        info.show(getSupportFragmentManager(), "infodialog");
+    }
+
+    public void showMap(View v) {
+        Intent i = new Intent(MainActivity.this,MapActivity.class);
+        startActivity(i);
     }
 }

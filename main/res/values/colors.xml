@@ -3,4 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="cam_button_color">#01aa29</color>
+    <color name="ilac_button_color">#3e0944</color>
+    <color name="pil_button_color">#b70b0b</color>
+    <color name="bitkisel_yag_button_color">#e86e0b</color>
+    <color name="elektronik_button_color">#020277</color>
+    <color name="diger_ambalaj_button_color">#0f8bbc</color>
+    <color name="tekstil_button_color">#3d3a3a</color>
+    <color name="text_color">#ffffff</color>
+    <color name="background_color">#d3fcc2</color>
 </resources>
