@@ -9,9 +9,10 @@ public class InfoDialog extends AppCompatDialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
+        int title = getArguments().getInt("title");
         int str = getArguments().getInt("str");
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder  = builder.setTitle("Information").setMessage(str);
+        builder  = builder.setTitle(title).setMessage(str);
         return builder.create();
     }
 }

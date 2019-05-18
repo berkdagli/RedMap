@@ -16,34 +16,44 @@ public class MainActivity extends AppCompatActivity {
 
     public void showInfo(View v) {
         int str;
+        int title;
         switch(v.getId()) {
             case R.id.ilac_info:
                 str = R.string.ilac_info;
+                title = R.string.ilac_button;
             break;
             case R.id.bitkisel_yag_info:
                 str = R.string.bitkisel_yag_info;
+                title = R.string.bitkisel_yag_button;
             break;
             case R.id.pil_info:
                 str = R.string.pil_info;
+                title = R.string.pil_button;
             break;
             case R.id.cam_info:
                 str = R.string.cam_info;
+                title = R.string.cam_ambalaj_button;
             break;
             case R.id.diger_ambalaj_info:
                 str = R.string.diger_ambalaj_info;
+                title = R.string.diger_ambalaj_button;
             break;
             case R.id.elektronik_info:
                 str = R.string.elektronik_info;
+                title = R.string.elektronik_button;
             break;
             case R.id.tekstil_info:
                 str = R.string.tekstil_info;
+                title = R.string.tekstil_button;
             break;
             default:
                 str = R.string.tekstil_info;
+                title = R.string.tekstil_button;
             break;
         }
         Bundle args = new Bundle();
         args.putInt("str",str);
+        args.putInt("title",title);
         InfoDialog info = new InfoDialog();
         info.setArguments(args);
         info.show(getSupportFragmentManager(), "infodialog");
@@ -52,5 +62,6 @@ public class MainActivity extends AppCompatActivity {
     public void showMap(View v) {
         Intent i = new Intent(MainActivity.this,MapActivity.class);
         startActivity(i);
+
     }
 }
