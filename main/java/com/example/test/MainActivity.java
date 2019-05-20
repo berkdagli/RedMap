@@ -3,7 +3,12 @@ package com.example.test;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +16,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d("msg","girdi1");
+        MenuInflater inflater = getMenuInflater();
+        Log.d("msg","girdi2");
+        inflater.inflate(R.menu.main_menu,menu);
+        Log.d("msg","girdi3");
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        showFeedbackScreen(item);
+        return true;
     }
 
     public void showInfo(View v) {
@@ -84,6 +105,11 @@ public class MainActivity extends AppCompatActivity {
                 arg = Constants.DIGER;
         }
         i.putExtra("pointID",arg);
+        startActivity(i);
+    }
+
+    public void showFeedbackScreen(MenuItem item) {
+        Intent i = new Intent(MainActivity.this,FeedbackActivity.class);
         startActivity(i);
     }
 }

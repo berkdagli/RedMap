@@ -27,9 +27,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MapActivity">
-
-        </activity>
+        <activity android:name=".MapActivity"/>
+        <activity android:name=".FeedbackActivity"/>
     </application>
 
 </manifest>
