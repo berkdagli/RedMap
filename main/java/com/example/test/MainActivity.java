@@ -3,7 +3,6 @@ package com.example.test;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -60,8 +59,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showMap(View v) {
+        int arg;
         Intent i = new Intent(MainActivity.this,MapActivity.class);
+        switch (v.getId()) {
+            case R.id.cam_ambalaj_button:
+                arg = Constants.CAM;
+                break;
+            case R.id.ilac_button:
+                arg = Constants.ILAC;
+                break;
+            case R.id.pil_button:
+                arg = Constants.PIL;
+                break;
+            case R.id.bitkisel_yag_button:
+                arg = Constants.YAG;
+                break;
+            case R.id.elektronik_button:
+                arg = Constants.ELEKTRONIK;
+                break;
+            case R.id.tekstil_button:
+                arg = Constants.TEKSTIL;
+                break;
+            default:
+                arg = Constants.DIGER;
+        }
+        i.putExtra("pointID",arg);
         startActivity(i);
-
     }
 }
