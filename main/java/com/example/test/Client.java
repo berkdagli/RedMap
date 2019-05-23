@@ -1,7 +1,5 @@
 package com.example.test;
 
-import android.util.Log;
-
 import com.google.android.gms.maps.model.LatLng;
 
 import org.json.JSONException;
@@ -10,6 +8,7 @@ import org.json.JSONObject;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 
 public class Client {
@@ -44,5 +43,25 @@ public class Client {
         catch(Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public int sendText(String text) throws JSONException {
+        int op = 1;
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("op",op);
+        jsonObject.put("message",(String)text);
+        try {
+            Socket s = new Socket();
+            s.connect(new InetSocketAddress(serverIP,serverPort),1000);
+            out = new DataOutputStream(s.getOutputStream());
+            out.writeUTF(jsonObject.toString());
+            out.close();
+            s.close();
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            return 1;
+        }
+        return 0;
     }
 }

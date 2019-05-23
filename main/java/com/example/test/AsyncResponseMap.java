@@ -1,5 +1,5 @@
 package com.example.test;
 
-public interface AsyncResponse {
+public interface AsyncResponseMap {
     void drawPolylineOnMap(Response r);
 }

@@ -3,12 +3,10 @@ package com.example.test;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,11 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        Log.d("msg","girdi1");
         MenuInflater inflater = getMenuInflater();
-        Log.d("msg","girdi2");
         inflater.inflate(R.menu.main_menu,menu);
-        Log.d("msg","girdi3");
         return true;
     }
 

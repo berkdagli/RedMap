@@ -4,7 +4,7 @@ public class Constants {
     final static int REQUEST_LOCATION = 200;
     final static long TIME_INTERVAL = 3000;
     final static float MIN_DISTANCE = 10;
-    final static String SERVER_IP = "192.168.2.50";//"78.171.196.133";
+    final static String SERVER_IP = "192.168.2.50";//"78.171.170.143"
     final static int SERVER_PORT = 8000;
     final static int CAM = 0;
     final static int ILAC = 1;

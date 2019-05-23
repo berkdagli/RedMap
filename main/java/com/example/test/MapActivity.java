@@ -25,18 +25,15 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.PermissionChecker;
-import android.util.Log;
 
 import org.json.JSONException;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.List;
 
-public class MapActivity extends FragmentActivity implements OnMapReadyCallback, AsyncResponse {
+public class MapActivity extends FragmentActivity implements OnMapReadyCallback, AsyncResponseMap {
 
     int color_id;
     NetworkTask networkTask = new NetworkTask();
@@ -170,7 +167,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
     }
 
     private class NetworkTask extends AsyncTask<TaskParams, Void, Response> {
-        public AsyncResponse delegate = null;
+        public AsyncResponseMap delegate = null;
         @Override
         protected Response doInBackground(TaskParams... taskParams) {
             Client c = new Client();
@@ -193,6 +190,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            c = null;
             Response r = new Response(polyline,lat,lng);
             return r;
         }
@@ -215,4 +213,3 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
         }
     }
 }
-
